@@ -18,7 +18,7 @@ public class AfterAopAspect {
 	
 	// Weaving and weaver
 	@AfterReturning(
-			value="execution(* com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()",
+			value="com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()",
 			returning="result"
 			)
 	public void afterReturning(JoinPoint joinPoint, Object result) {
@@ -26,7 +26,7 @@ public class AfterAopAspect {
 	}
 	
 	// Weaving and weaver
-	@After(value="execution(* com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
+	@After(value="com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
 	public void after(JoinPoint joinPoint) {
 		logger.info("after execution of {} ", joinPoint);
 	}

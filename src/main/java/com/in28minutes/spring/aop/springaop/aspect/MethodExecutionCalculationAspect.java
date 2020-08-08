@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class MethodExecutionCalculationAspect {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	@Around("execution(* com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
+	@Around("com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.trackTimeAnnotation()")
 	public void around(ProceedingJoinPoint joinPoint) {
 		long startTime = System.currentTimeMillis();;
 		

@@ -18,7 +18,7 @@ public class UseAccessAspect {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	// Weaving and weaver
-	@Before("execution(* com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()")
+	@Before("com.in28minutes.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()")
 	public void before(JoinPoint joinPoint) {
 		logger.info("Check for user access ");
 		logger.info(" Intercepted Method Calls - {}", joinPoint);
